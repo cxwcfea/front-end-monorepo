@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo ====组件库代码静态检查====
+cd packages/lucky-ui-vite
+npx --no -- lint-staged
+
+cd ../../
+
+echo ====admin代码静态检查====
+cd packages/lucky-admin
+npx --no -- lint-staged

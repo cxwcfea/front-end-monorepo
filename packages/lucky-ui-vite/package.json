@@ -1,0 +1,47 @@
+{
+  "name": "lucky-ui-vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix --quiet src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.13",
+    "@ruabick/md-demo-plugins": "0.3.1",
+    "@ruabick/vitepress-demo-block": "0.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "unocss": "^0.50.6",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitepress": "1.0.0-alpha.61"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,vue}": [
+      "npm run lint",
+      "git add ."
+    ]
+  }
+}
