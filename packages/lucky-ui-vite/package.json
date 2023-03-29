@@ -1,5 +1,5 @@
 {
-  "name": "lucky-ui-vite",
+  "name": "@cxwcfea/lucky-ui-vite",
   "version": "0.1.0",
   "description": "",
   "main": "dist/lucky-ui.umd.js",
