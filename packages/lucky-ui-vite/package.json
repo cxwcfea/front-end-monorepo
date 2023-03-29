@@ -1,8 +1,9 @@
 {
   "name": "lucky-ui-vite",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lucky-ui.umd.js",
+  "module": "dist/lucky-ui.mjs",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -10,10 +11,12 @@
     "build": "vite build",
     "dev": "vite",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix --quiet src",
+    "preversion": "npm run build",
+    "publish:patch": "npm version patch && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "cxwcfea",
   "license": "ISC",
   "dependencies": {
     "vue": "^3.2.47"
