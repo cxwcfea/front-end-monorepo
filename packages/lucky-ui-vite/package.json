@@ -1,6 +1,6 @@
 {
-  "name": "@live/lucky-ui-vite",
-  "version": "0.1.0",
+  "name": "@mfe/lucky-ui-vite",
+  "version": "0.1.4",
   "description": "",
   "main": "dist/lucky-ui.umd.js",
   "module": "dist/lucky-ui.mjs",
@@ -48,5 +48,9 @@
       "npm run lint",
       "git add ."
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.kuaishou.com:ks-frontend/live/business-platform/lp-ui.git"
   }
 }
