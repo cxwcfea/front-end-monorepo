@@ -17,7 +17,7 @@ export default defineConfig({
     plugins: [vue(), vueJsx(), viteEslint(), Unocss()],
     build: {
         rollupOptions,
-        minify: false,
+        minify: 'terser',
         lib: {
             entry: './src/entry.ts',
             name: 'LuckyUI',
