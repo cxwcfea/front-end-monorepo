@@ -2,7 +2,7 @@ import { defineConfig, UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import viteEslint from 'vite-plugin-eslint';
-import Unocss from './config/unocss';
+import Unocss from '../../config/unocss';
 
 const rollupOptions = {
     external: ['vue', 'vue-router'],
@@ -19,12 +19,12 @@ export const config: UserConfig = {
         rollupOptions,
         minify: 'terser',
         lib: {
-            entry: './src/entry.ts',
-            name: 'LuckyUI',
-            fileName: 'lucky-ui',
+            entry: '$$entry',
+            name: '$$name',
+            fileName: 'index',
             formats: ['es', 'umd', 'iife'],
         },
-        outDir: 'dist',
+        outDir: '$$outDir',
     },
 };
 

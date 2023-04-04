@@ -1,11 +1,16 @@
 # Lucky-UI
 
-# Button 按钮
+## LuckyButton 按钮
 
   <div style="margin-bottom:20px;">
-    <MyButton color="blue">主要按钮</MyButton>
-    <MyButton color="green">绿色按钮</MyButton>
-    <MyButton color="gray">灰色按钮</MyButton>
-    <MyButton color="yellow">黄色按钮</MyButton>
-    <MyButton color="red">红色按钮</MyButton>
+    <LuckyButton color="blue">主要按钮</LuckyButton>
+    <LuckyButton color="green">绿色按钮</LuckyButton>
+    <LuckyButton color="gray">灰色按钮</LuckyButton>
+    <LuckyButton color="yellow">黄色按钮</LuckyButton>
+    <LuckyButton color="red">红色按钮</LuckyButton>
+  </div>
+
+## LuckyLink 链接
+  <div style="margin-bottom:20px;">
+    <LuckyLink></LuckyLink>
   </div>

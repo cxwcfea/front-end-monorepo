@@ -7,18 +7,18 @@
     import LuckyUI, {
         SFCButton,
         JSXButton,
-        MyButton,
+        LuckyButton,
     } from "../../dist/lucky-ui.mjs";
 
     createApp({
         template: `
-<MyButton>普通按钮</MyButton>
+<LuckyButton>普通按钮</LuckyButton>
 <SFCButton/>
 <JSXButton/>
 `,
     })
         .component(SFCButton.name, SFCButton)
         .component(JSXButton.name, JSXButton)
-        .component(MyButton.name, MyButton)
+        .component(LuckyButton.name, LuckyButton)
         .mount("#app");
 </script>

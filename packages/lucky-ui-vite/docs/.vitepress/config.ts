@@ -10,6 +10,7 @@ const sidebar = {
             text: '通用',
             items: [
                 { text: 'Button 按钮', link: '/components/button/' },
+                { text: 'Link 链接', link: '/components/link/' },
             ],
         },
         { text: '导航' },

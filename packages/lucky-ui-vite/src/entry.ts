@@ -1,13 +1,16 @@
 import { App } from 'vue';
-import MyButton from './button';
+import { LuckyButton } from './LuckyButton';
+import { LuckyLink } from './LuckyLink';
 import SFCButton from './SFCButton.vue';
 import JSXButton from './JSXButton';
+import 'uno.css';
 
-export { MyButton, SFCButton, JSXButton };
+export { LuckyButton, LuckyLink, SFCButton, JSXButton };
 
 export default {
     install(app: App): void {
-        app.component(MyButton.name, MyButton);
+        app.component(LuckyButton.name, LuckyButton);
+        app.component(LuckyLink.name, LuckyLink);
         app.component(SFCButton.name, SFCButton);
         app.component(JSXButton.name, JSXButton);
     },
