@@ -1,4 +1,4 @@
-import { defineComponent, PropType, toRefs } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import 'uno.css';
 
 export type ISize = 'small' | 'medium' | 'large';
@@ -28,7 +28,7 @@ export const propsDefine = {
 } as const;
 
 export default defineComponent({
-    name: 'MyButton',
+    name: 'LuckyButton',
     props: propsDefine,
     setup(props, { slots }) {
         const size = {

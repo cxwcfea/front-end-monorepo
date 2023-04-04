@@ -1,0 +1,14 @@
+<h1>Demo</h1>
+<div id="app"></div>
+<script type="module">
+    import { createApp } from 'vue/dist/vue.esm-bundler.js';
+    // eslint-disable-next-line
+    import  LuckyButton from "../../dist/LuckyButton/index.mjs";
+    // eslint-disable-next-line
+    import "../../dist/LuckyButton/style.css";
+
+    createApp({
+        template: `
+<LuckyButton color="blue">Test</LuckyButton>
+    `}).use(LuckyButton).mount('#app');
+</script>

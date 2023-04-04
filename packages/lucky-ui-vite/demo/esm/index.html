@@ -2,11 +2,11 @@
 <div id="app"></div>
 <script type="module">
     import { createApp } from 'vue/dist/vue.esm-bundler.js';
-    import LuckyUI, { SFCButton, JSXButton, MyButton } from '../../dist/lucky-ui.mjs';
+    import LuckyUI, { SFCButton, JSXButton, LuckyButton } from '../../dist/lucky-ui.mjs';
 
     createApp({
         template: `
-<MyButton />
+<LuckyButton />
 <SFCButton />
 <JSXButton />
     `}).use(LuckyUI).mount('#app');
