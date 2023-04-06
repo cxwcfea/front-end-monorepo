@@ -2,6 +2,7 @@ import { defineConfig, UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import viteEslint from 'vite-plugin-eslint';
+import dts from 'vite-plugin-dts';
 import Unocss from './config/unocss';
 
 const rollupOptions = {
@@ -14,7 +15,17 @@ const rollupOptions = {
 };
 
 export const config: UserConfig = {
-    plugins: [vue(), vueJsx(), viteEslint(), Unocss()],
+    plugins: [
+        vue(),
+        vueJsx(),
+        viteEslint(),
+        Unocss(),
+        dts({
+            outputDir: './dist/types',
+            insertTypesEntry: false,
+            copyDtsFiles: true,
+        }),
+    ],
     build: {
         rollupOptions,
         minify: 'terser',

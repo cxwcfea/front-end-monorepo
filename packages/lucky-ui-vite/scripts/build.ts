@@ -1,6 +1,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { build } from 'vite';
+import generateDTS from './type';
 import { config } from '../vite.config';
 
 const generateCofnig = (name, filePath, outDir) => {
@@ -16,6 +17,8 @@ const buildAll = async () => {
 
     const baseOutDir = config.build?.outDir || '';
     fs.copyFileSync(path.resolve(__dirname, '../package.json'), path.resolve(baseOutDir, `package.json`));
+
+    generateDTS(path.resolve(config.build?.outDir || '', 'lucky-ui.mjs'));
 
     const srcDir = path.resolve(__dirname, '../src/');
     const componentsDir = fs.readdirSync(srcDir).filter((name) => {
