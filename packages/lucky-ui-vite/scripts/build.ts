@@ -9,7 +9,7 @@ const generateCofnig = (name, filePath, outDir) => {
     configContent = configContent.replace('$$entry', path.resolve(__dirname, '../src', name, 'index.ts'));
     configContent = configContent.replace('$$name', name);
     configContent = configContent.replace('$$outDir', outDir);
-    fs.outputFile(filePath, configContent);
+    fs.outputFileSync(filePath, configContent);
 };
 
 const buildAll = async () => {
