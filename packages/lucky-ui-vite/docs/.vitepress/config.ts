@@ -12,6 +12,8 @@ const sidebar = {
                 { text: 'Button 按钮', link: '/components/button/' },
                 { text: 'Link 链接', link: '/components/link/' },
                 { text: 'Box 区块', link: '/components/box/' },
+                { text: 'Message 消息', link: '/components/message/' },
+                { text: 'Dialog 弹窗', link: '/components/dialog/' },
             ],
         },
         { text: '导航' },

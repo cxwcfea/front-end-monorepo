@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import DemoBlock from '@ruabick/vitepress-demo-block';
 import '@ruabick/vitepress-demo-block/dist/style.css';
 import LuckyUI from '../../../src/entry';
+// import '../../../dist/style.css';
 
 export default {
   ...DefaultTheme,

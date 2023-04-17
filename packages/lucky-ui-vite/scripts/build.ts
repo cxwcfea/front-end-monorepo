@@ -24,7 +24,7 @@ const buildAll = async () => {
     const componentsDir = fs.readdirSync(srcDir).filter((name) => {
         const componentDir = path.resolve(srcDir, name);
         const isDir = fs.lstatSync(componentDir).isDirectory();
-        return isDir && fs.readdirSync(componentDir).includes('index.ts');
+        return isDir && name.startsWith('Lucky') && fs.readdirSync(componentDir).includes('index.ts');
     });
 
     for (let i = 0; i < componentsDir.length; i += 1) {
