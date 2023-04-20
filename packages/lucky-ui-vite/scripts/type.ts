@@ -16,7 +16,8 @@ async function getComponents(input) {
     return Object.keys(entry)
         .filter((k) => k !== 'default')
         .map((k) => ({
-            name: entry[k].name,
+            // eslint-disable-next-line no-underscore-dangle
+            name: entry[k].name || entry[k].__name,
             component: k,
         }));
 }

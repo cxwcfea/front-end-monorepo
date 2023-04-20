@@ -9,6 +9,8 @@ const sidebar = {
         {
             text: '通用',
             items: [
+                { text: '栅格', link: '/components/grid/' },
+                { text: 'Layout 布局', link: '/components/layout/' },
                 { text: 'Button 按钮', link: '/components/button/' },
                 { text: 'Link 链接', link: '/components/link/' },
                 { text: 'Box 区块', link: '/components/box/' },
