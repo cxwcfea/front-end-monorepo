@@ -11,6 +11,7 @@ import { LuckyHeader } from './LuckyHeader';
 import { LuckyFooter } from './LuckyFooter';
 import { LuckyContent } from './LuckyContent';
 import { LuckySider } from './LuckySider';
+import { LuckyForm } from './LuckyForm';
 import SFCButton from './SFCButton.vue';
 import JSXButton from './JSXButton';
 import 'uno.css';
@@ -29,6 +30,7 @@ export {
     LuckyFooter,
     LuckyContent,
     LuckySider,
+    LuckyForm,
     SFCButton,
     JSXButton,
 };
@@ -45,6 +47,7 @@ export default {
         app.component('LuckyFooter', LuckyFooter);
         app.component('LuckyContent', LuckyContent);
         app.component('LuckySider', LuckySider);
+        app.component('LuckyForm', LuckyForm);
         app.component(SFCButton.name, SFCButton);
         app.component(JSXButton.name, JSXButton);
     },

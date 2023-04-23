@@ -16,6 +16,7 @@ const sidebar = {
                 { text: 'Box 区块', link: '/components/box/' },
                 { text: 'Message 消息', link: '/components/message/' },
                 { text: 'Dialog 弹窗', link: '/components/dialog/' },
+                { text: 'Form 表单', link: '/components/form/' },
             ],
         },
         { text: '导航' },
