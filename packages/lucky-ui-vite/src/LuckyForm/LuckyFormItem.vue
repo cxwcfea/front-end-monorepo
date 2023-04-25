@@ -79,7 +79,7 @@ async function validateField(): Promise<ValidateResult> {
 }
 
 onMounted(() => {
-    if (formContext?.model && props.name && formContext.model[props.name]) {
+    if (formContext?.model && props.name && formContext.model[props.name] != null) {
         formContext.addField({
             name: props.name,
             rule: props.rule,
