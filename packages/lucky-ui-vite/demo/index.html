@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Demo</title>
+    <style>
+        .drag-layout {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #999999;
+        }
+        .drag-item {
+            height: 40px;
+            border: 1px solid #cccccc;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .drag-item.active {
+            opacity: 0.4;
+        }
+        .drag-layout.horizontal { flex-direction: row; display: flex; }
+        .drag-layout.horizontal .drag-item { width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="drag-layout horizontal">
+        <div draggable="true" class="drag-item" style="background: #00bcd4;">模块1</div>
+        <div draggable="true" class="drag-item" style="background: #8bc34a;">模块2</div>
+        <div draggable="true" class="drag-item" style="background: #ffeb3b;">模块3</div>
+        <div draggable="true" class="drag-item" style="background: #ff5722;">模块4</div>
+    </div>
+    <script>
+        const dragLayout = document.querySelector('.drag-layout');
+        let activeIndex = -1;
+        let dragToIndex = -1;
+        let prevItems = [];
+
+        function getItemIndex(item) {
+            let elem = item;
+            let index = -1;
+            if (!elem || !elem.parentElement) {
+                return index;
+            }
+            index = 0;
+            elem = elem.previousElementSibling;
+            while (elem) {
+                index += 1;
+                elem = elem.previousElementSibling;
+            }
+            return index;
+        }
+
+        function resetItems() {
+            if (!prevItems[activeIndex]) {
+                return;
+            }
+            if (dragToIndex >= 0 && dragToIndex < prevItems.length) {
+                const newItems = [...prevItems];
+                const [activeItem] = newItems.splice(activeIndex, 1);
+                if (dragToIndex === 0) {
+                    newItems.unshift(activeItem);
+                } else {
+                    newItems.splice(dragToIndex, 0, activeItem);
+                }
+                Array.from(dragLayout.children).forEach(elem => {
+                    dragLayout.removeChild(elem);
+                });
+                newItems.forEach(elem => {
+                    dragLayout.appendChild(elem);
+                });
+            }
+        }
+
+        document.addEventListener('dragstart', (e) => {
+            console.log('dragstart');
+            const dom = e.target;
+            const isItem = dom.classList.contains('drag-item');
+            if (isItem) {
+                prevItems = Array.from(document.querySelectorAll('.drag-item'));
+                activeIndex = getItemIndex(dom);
+                dom.classList.add('active');
+            }
+        });
+
+        document.addEventListener('dragover', (e) => {
+            console.log('dragover');
+            e.preventDefault();
+            const dom = e.target;
+            const isItem = dom.classList.contains('drag-item');
+            if (isItem) {
+                dragToIndex = getItemIndex(dom);
+                resetItems();
+            }
+        });
+
+        document.addEventListener('dragend', (e) => {
+            console.log('dragend');
+            e.preventDefault();
+            prevItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            activeIndex = -1;
+            dragToIndex = -1;
+        });
+    </script>
+</body>
+</html>

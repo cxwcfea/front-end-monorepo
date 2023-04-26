@@ -15,6 +15,7 @@ import { LuckyForm } from './LuckyForm';
 import { LuckyDynamicForm } from './LuckyDynamicForm';
 import { LuckyInput } from './LuckyInput';
 import { LuckyRadioList } from './LuckyRadioList';
+import { LuckyDrag } from './LuckyDrag';
 import SFCButton from './SFCButton.vue';
 import JSXButton from './JSXButton';
 import 'uno.css';
@@ -37,6 +38,7 @@ export {
     LuckyDynamicForm,
     LuckyInput,
     LuckyRadioList,
+    LuckyDrag,
     SFCButton,
     JSXButton,
 };
@@ -57,6 +59,7 @@ export default {
         app.component('LuckyDynamicForm', LuckyDynamicForm);
         app.component('LuckyInput', LuckyInput);
         app.component('LuckyRadioList', LuckyRadioList);
+        app.component('LuckyDrag', LuckyDrag);
         app.component(SFCButton.name, SFCButton);
         app.component(JSXButton.name, JSXButton);
     },

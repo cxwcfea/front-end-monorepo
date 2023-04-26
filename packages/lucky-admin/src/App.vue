@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue';
 import UIDemo from './components/UIDemo.vue';
+import DragDemo from './components/DragDemo.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import UIDemo from './components/UIDemo.vue';
         </a>
     </div>
     <UIDemo msg="Vite + Vue" />
+    <DragDemo />
 </template>
 
 <style scoped>
